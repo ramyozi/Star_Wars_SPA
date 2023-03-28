@@ -1,0 +1,22 @@
+<div *ngIf="chasseur" class="detail">
+    <h2>Chasseurs </h2>
+    <div>id: {{chasseur.id}}</div>
+    <div class="form">
+        <div>
+            <label for="Chasseurs-type">type: </label>
+            <input id="Chasseurs-type" [(ngModel)]="chasseur.type" placeholder="type">
+        </div>
+        <div>
+            <label for="chasseur-etat">Etat: </label>
+            <select name="chasseur-etat" [(ngModel)]="chasseur.etat">
+                <option>Opérationnel</option>
+                <option>En réparation</option>
+                <option>Détruit</option>                
+            </select>
+        </div>
+    </div>
+</div>
+<div class="valide">
+    <button type="button" (click)="goBack()">go back</button>
+    <button type="button" (click)="save()">save</button>
+</div>

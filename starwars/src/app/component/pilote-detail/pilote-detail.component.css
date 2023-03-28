@@ -1,0 +1,41 @@
+
+.detail {
+    text-align: center;
+  }
+  .detail > div:nth-child(2) {
+    background: var(--color-principal);
+    color: black;
+    font-weight: bolder;
+    display: inline-block;
+    padding: 15px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+  .form {
+    max-width: 400px;
+    margin: 0 auto 50px;
+    border: 2px solid var(--color-principal);
+    padding: 15px;
+  }
+  .valide {
+    display: flex;
+    justify-content: center;
+  }
+  .form div {
+    display: flex;
+    margin: 15PX;
+  }
+  .form div label {
+    width: 40%;
+    text-align: left;
+  }
+  .form div input, .form div select {
+    width: 60%;
+    border-radius: 0;
+    border: none;
+    padding: 5px;
+    background: var(--color-principal);
+  }
+  .form div select {
+    width: calc(60% + 10px);
+  }

@@ -1,0 +1,50 @@
+<div *ngIf="pilote" class="detail">
+    <h2>Pilote: {{pilote.nom | uppercase}} {{pilote.prenom | titlecase}}</h2>
+    <div>id: {{pilote.id}}</div>
+    <div class="form">
+        <div>
+            <label for="pilote-name">Nom: </label>
+            <input id="pilote-name" [(ngModel)]="pilote.nom" placeholder="Nom">
+        </div>
+        <div>
+            <label for="pilote-prenom">Prenom: </label>
+            <input id="pilote-prenom" [(ngModel)]="pilote.prenom" placeholder="Prenom">
+        </div>
+        <div>
+            <label for="pilote-age">Age: </label>
+            <input type="number" id="pilote-age" [(ngModel)]="pilote.age" placeholder="Age" min="10" max="100">
+        </div>
+        <div>
+            <label for="pilote-race">Race: </label>
+            <select name="pilote-race" [(ngModel)]="pilote.race">
+                <option>Chalactéens</option>
+                <option>Chiss</option>
+                <option>Humains</option>
+                <option>Ithoriens</option>
+                <option>Mirialans</option>
+                <option>Kel'Dor</option>
+                <option>Kiffars</option>
+                <option>Miralukas</option>
+                <option>Mirialans</option>
+                <option>Nagais</option>
+                <option>Neimoidiens</option>
+                <option>Niktos</option>
+                <option>Noghris</option>
+                <option>Ongrees</option>
+                <option>Pau'ans</option>
+                <option>Quermiens</option>
+                <option>Rakata</option>
+                <option>Rodiens</option>
+                <option>Thisspasiens</option>
+                <option>Togrutas</option>
+                <option>Wookies</option>
+                <option>Wronians</option>
+                <option>Zabraks</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="valide">
+    <button type="button" (click)="goBack()">RETOUR</button>
+    <button type="button" (click)="save()">MODIFIER</button>
+</div>

@@ -1,0 +1,197 @@
+/* https://www.dafont.com/star-jedi.font */
+@font-face {
+	font-family: 'changa';
+	src: url('/assets/fonts/Changa-VariableFont_wght.ttf');
+}
+@font-face {
+	font-family: 'roboto';
+	src:url('/assets/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+	font-family: 'Geostar Fill';
+	src:url('/assets/fonts/GeostarFill-Regular.ttf');
+}
+@font-face {
+	font-family: 'Lobster';
+	src:url('/assets/fonts/Lobster-Regular.ttf');
+}
+
+:root{
+    --color-principal: rgb(255, 213, 78);
+}
+html, body{
+    background: rgb(0, 0, 0) url("https://storage.kassellabs.io/star-wars/bg-stars.png") repeat  fixed 0% 0%;
+    color: var(--color-principal);
+    margin: 0;
+    font-family: monospace;
+}
+body {
+    padding: 50px 0;
+}
+header{
+    text-align:center;
+}
+nav {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+nav a {
+    border: 2px solid var(--color-principal);
+    color: var(--color-principal);
+    text-decoration: none;
+    padding: 15px;
+    margin: 15px 0;
+    width: 50%;
+    font-family: 'changa';
+    font-weight: bold;
+}
+nav a:first-child{
+    margin-right:30px;
+}
+a:active,
+a:focus {
+    background: var(--color-principal);
+    color: black !important;
+  }
+
+
+main {
+    border: 2px solid;
+    max-width: 998px;
+    padding: 15px 50px 50px;
+    margin: 15px auto;
+}
+.content-with {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+button {
+    background: var(--color-principal);
+    border: none;
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 15px;
+    width: 50%;
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 50px 0;
+}
+
+.pilotes {
+    list-style: none;
+    padding: 0;
+}
+.pilotes li {
+    border: 2px solid var(--color-principal);
+    margin-bottom: 15px;
+}
+
+.pilotes li a {
+    color: var(--color-principal);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-left: 49px;
+}
+.pilotes li .badge {
+    padding: 15px;
+}
+.pilotes.pilotes li .badge:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-principal);
+    color: black;
+}
+.badge:not(.badge:first-child) {
+    width: 25%;
+}
+.pilotes .badge:nth-child(4) {
+    width: 17%;
+}
+.pilotes .badge:nth-child(5) {
+    width: 33%;
+}
+.pre-SM {
+    width: 400px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+    .content-with {        
+        padding: 0 50px;
+    }
+    main {
+        max-width: none;
+        margin: 15px 50px 0;
+    }
+    .valide {
+        margin-bottom: 50px;
+    }
+    .pilotes li .badge {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 768px) {
+    main,
+    .content-with {
+        max-width: none;
+        padding: 0 15px;
+    }
+    main {
+        margin: 15px 15px 0;
+    }
+    .valide {
+        margin-bottom: 50px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    nav a {
+        margin-bottom: 0;
+    }
+    nav a:first-child {
+        margin-right: 15px;
+    }
+    .pilotes a .badge:not(.badge:first-child) {
+        width: 50%;
+        display: inline-block;
+        padding: 0;
+        line-height: 50px;
+        text-align: center;
+        font-size: 12px;
+    }
+    .pilotes a .badge:first-child {
+        display: block;
+        height: calc(100% - 10px);
+        width: 20%;
+        position: absolute;
+        padding: 10px 0 0;
+        text-align: center;
+        line-height: 100px;
+    }
+    .pilotes li a {
+        position: relative;
+        display: block;
+        padding-left: 20%;
+    }
+    .pilotes li {
+        position: relative;
+    }
+    .pilotes a .badge:first-child:before {
+        content: 'ID:';
+        font-size: 10px;
+        position: absolute;
+        top: -15px;
+        text-align: center;
+        width: 100%;
+        left: 0;
+    }
+    .pre-SM{
+        margin-bottom: 50px;
+    }
+}

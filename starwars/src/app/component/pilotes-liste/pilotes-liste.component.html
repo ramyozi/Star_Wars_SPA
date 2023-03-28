@@ -1,0 +1,18 @@
+<nav>
+    <a routerLink="../pilote-inscription">Inscription pilote</a>
+    <a routerLink="../pilote-recherche">Recherche pilote</a>
+</nav>
+
+<h2>LES PILOTES :</h2>
+
+<ul class="pilotes">
+   <li *ngFor="let pilote of pilotes">
+        <a routerLink="/detail/{{pilote.id}}">
+            <span class="badge">{{pilote.id}}</span>
+            <span class="badge">{{pilote.nom | uppercase}}</span>
+            <span class="badge">{{pilote.prenom | titlecase}}</span>
+            <span class="badge">Age: {{pilote.age}}</span>
+            <span class="badge">Race: {{pilote.race}}</span> 
+        </a>
+    </li>   
+</ul>

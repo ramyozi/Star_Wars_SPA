@@ -1,0 +1,15 @@
+<div class="search-component">
+    <input #searchBox class="search-box" (input)="search(searchBox.value)" placeholder="recherche par ID !!!"/>
+    <ul class="pilotes">
+        <li *ngFor="let pilote of pilotes$ | async" >
+            <a routerLink="/detail/{{pilote.id}}">
+                <span class="badge">{{pilote.id}}</span>
+                <span class="badge">{{pilote.nom | uppercase}}</span>
+                <span class="badge">{{pilote.prenom | titlecase}}</span>
+                <span class="badge">Age: {{pilote.age}}</span>
+                <span class="badge">Race: {{pilote.race}}</span> 
+            </a>
+        </li>
+    </ul>
+</div>
+
